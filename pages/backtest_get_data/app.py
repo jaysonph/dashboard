@@ -26,7 +26,7 @@ with c2:
                                    default=["1m", "5m", "15m"])
     else:
         intervals = st.multiselect("Intervals", options=["1s", "1m", "3m", "5m", "15m", "1h", "4h", "1d"], default=["1m", "3m", "1h"])
-    days_to_download = st.number_input("Days to Download", value=30, min_value=1, max_value=365, step=1)
+    days_to_download = st.number_input("Days to Download", value=30, min_value=1, max_value=3650, step=1)
 with c3:
     get_data_button = st.button("Download Candles!")
     clean_container_folder_button = st.button("Clean Candles Folder")
