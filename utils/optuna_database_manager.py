@@ -10,7 +10,7 @@ from utils.data_manipulation import StrategyData
 
 
 class OptunaDBManager:
-    def __init__(self, db_name, db_root_path: Optional[str]):
+    def __init__(self, db_name, db_root_path: Optional[str] = None):
         db_root_path = db_root_path or "data/backtesting"
         self.db_name = db_name
         self.db_path = f'sqlite:///{os.path.join(db_root_path, db_name)}'
